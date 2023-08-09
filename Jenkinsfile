@@ -6,10 +6,6 @@ pipeline {
         string(name: 'AZURE_SUBSCRIPTION_ID', description: 'Azure Subscription ID')
     }
 
-    environment {
-        // Add environment variables as needed
-    }
-
     stages {
         stage('Checkout Code') {
             steps {
