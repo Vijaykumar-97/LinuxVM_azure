@@ -44,7 +44,7 @@ pipeline {
                                      string(credentialsId: 'azure-tenant-id', variable: 'AZURE_TENANT_ID')]) {
                         sh """
                             /opt/homebrew/bin/az login --service-principal --username \$AZURE_CLIENT_ID --password \$AZURE_CLIENT_SECRET --tenant \$AZURE_TENANT_ID
-                            ${terraformCmd}
+                            /opt/homebrew/bin/terraform ${terraformAction}
                             /opt/homebrew/bin/az logout
                         """
                     }
